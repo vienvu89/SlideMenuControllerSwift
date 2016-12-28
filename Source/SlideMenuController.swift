@@ -16,6 +16,7 @@ import UIKit
     @objc optional func rightDidOpen()
     @objc optional func rightWillClose()
     @objc optional func rightDidClose()
+    @objc optional func didFinishTransition()
 }
 
 public struct SlideMenuOptions {
@@ -181,6 +182,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 self.removeRightGestures()
                 self.addRightGestures()
             }
+            self.delegate?.didFinishTransition()
         })
     }
   
