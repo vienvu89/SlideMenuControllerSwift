@@ -182,7 +182,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 self.removeRightGestures()
                 self.addRightGestures()
             }
-            self.delegate?.didFinishTransition()
+            self.delegate?.didFinishTransition?()
         })
     }
   
